@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  get 'verbal2/index'
+  get 'numeric2/index'
 
-  get 'verbal1/index'
+  get 'numeric1/index'
+
+  
 
   get 'done/index'
 
