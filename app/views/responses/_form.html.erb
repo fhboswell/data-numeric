@@ -1,144 +1,557 @@
 <%= form_with(model: @response, local: true) do |form| %>
-  
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
+
+<!-- (Optional) Latest compiled and minified JavaScript translation files -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/i18n/defaults-*.min.js"></script>
+
 
   <table class="table table-striped">
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">X</th>
-      <th scope="col">Y</th>
-      <th scope="col">Response</th>
+      <th scope="col">CONSTRUCTION</th>
+      <th scope="col">LOCATION</th>
+      <th scope="col">OVERALL SATISFACTION</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th scope="row"><%= form.label :r11 %></th>
-      <td>75%</td>
-      <td>75%</td>
-      <td><%= form.text_field :r11, id: :response_r11, size: "6x12"%></td>
-    </tr>
-     <tr>
-      <th scope="row"><%= form.label :r12 %></th>
-      <td>50%</td>
-      <td>50%</td>
-      <td><%= form.text_field :r12, id: :response_r12, size: "6x12" %></td>
-    </tr>
-     <tr>
-      <th scope="row"><%= form.label :r13 %></th>
-      <td>25%</td>
-      <td>25%</td>
-      <td><%= form.text_field :r13, id: :response_r13, size: "6x12" %></td>
-    </tr>
-     <tr>
-      <th scope="row"><%= form.label :r21 %></th>
-      <td>10%</td>
-      <td>90%</td>
-      <td><%= form.text_field :r21, id: :response_r21, size: "6x12" %></td>
-    </tr>
-     <tr>
-      <th scope="row"><%= form.label :r22 %></th>
-      <td>20%</td>
-      <td>80%</td>
-      <td><%= form.text_field :r22, id: :response_r22, size: "6x12" %></td>
-    </tr>
-     <tr>
-      <th scope="row"><%= form.label :r23 %></th>
-      <td>30%</td>
-      <td>70%</td>
-      <td><%= form.text_field :r23, id: :response_r23, size: "6x12" %></td>
-    </tr>
-     <tr>
-      <th scope="row"><%= form.label :r24 %></th>
-      <td>40%</td>
-      <td>60%</td>
-      <td><%= form.text_field :r24, id: :response_r24, size: "6x12" %></td>
-    </tr>
-     <tr>
-      <th scope="row"><%= form.label :r25 %></th>
-      <td>90%</td>
-      <td>10%</td>
-      <td><%= form.text_field :r25, id: :response_r25, size: "6x12" %></td>
-    </tr>
-     <tr>
-      <th scope="row"><%= form.label :r26 %></th>
-      <td>80%</td>
-      <td>20%</td>
-      <td><%= form.text_field :r26, id: :response_r26, size: "6x12" %></td>
-    </tr>
-     <tr>
-      <th scope="row"><%= form.label :r27 %></th>
-      <td>70%</td>
-      <td>30%</td>
-      <td><%= form.text_field :r27, id: :response_r27, size: "6x12" %></td>
-    </tr>
-     <tr>
-      <th scope="row"><%= form.label :r28 %></th>
-      <td>60%</td>
-      <td>40%</td>
-      <td><%= form.text_field :r28, id: :response_r28, size: "6x12" %></td>
-    </tr>
-     <tr>
-      <th scope="row"><%= form.label :r31 %></th>
-      <td>0%</td>
-      <td>100%</td>
-      <td><%= form.text_field :r31, id: :response_r31, size: "6x12" %></td>
-    </tr>
-     <tr>
-      <th scope="row"><%= form.label :r32 %></th>
-      <td>100%</td>
-      <td>0%</td>
-      <td><%= form.text_field :r32, id: :response_r32, size: "6x12" %></td>
+      <th scope="row">1</th>
+      <td>Poor</td>
+      <td>Good</td>
+      <td>
+        <select class="selectpicker" name="response[r22]">
+          <option>-</option>
+          <option>Perfect</option>
+          <option>Slightly below perfect</option>
+          <option>Very good</option>
+          <option>Slightly above good</option>
+          <option style="background: #5cb85c; color: #fff;">Good</option>
+          <option style="background: #5cb85c; color: #fff;">Slightly below good</option>
+          <option style="background: #5cb85c; color: #fff;">Above average</option>
+          <option style="background: #5cb85c; color: #fff;">Slightly above average</option> 
+          <option style="background: #5cb85c; color: #fff;">Average</option>
+          <option style="background: #5cb85c; color: #fff;">Slightly below average</option>
+          <option style="background: #5cb85c; color: #fff;">Below average</option>
+          <option style="background: #5cb85c; color: #fff;">Slightly above poor</option>
+          <option  style="background: #5cb85c; color: #fff;">Poor</option>
+          <option>Slightly below poor</option>
+          <option>Very poor</option>
+          <option>Slightly above inadequate</option>
+          <option>Inadequate</option>
+        </select>
+      </td>
     </tr>
     <tr>
-      <th scope="row"><%= form.label :r41 %></th>
-      <td>10%</td>
-      <td>9%</td>
-      <td><%= form.text_field :r41, id: :response_r41, size: "6x12" %></td>
+      <th scope="row">2</th>
+      <td>Good</td>
+      <td>Poor</td>
+      <td>
+        <select class="selectpicker" name="response[r26]">
+          <option>-</option>
+          <option>Perfect</option>
+          <option>Slightly below perfect</option>
+          <option>Very good</option>
+          <option>Slightly above good</option>
+          <option style="background: #5cb85c; color: #fff;">Good</option>
+          <option style="background: #5cb85c; color: #fff;">Slightly below good</option>
+          <option style="background: #5cb85c; color: #fff;">Above average</option>
+          <option style="background: #5cb85c; color: #fff;">Slightly above average</option> 
+          <option style="background: #5cb85c; color: #fff;">Average</option>
+          <option style="background: #5cb85c; color: #fff;">Slightly below average</option>
+          <option style="background: #5cb85c; color: #fff;">Below average</option>
+          <option style="background: #5cb85c; color: #fff;">Slightly above poor</option>
+          <option  style="background: #5cb85c; color: #fff;">Poor</option>
+          <option>Slightly below poor</option>
+          <option>Very poor</option>
+          <option>Slightly above inadequate</option>
+          <option>Inadequate</option>
+        </select>
+      </td>
     </tr>
-     <tr>
-      <th scope="row"><%= form.label :r42 %></th>
-      <td>90%</td>
-      <td>91%</td>
-      <td><%= form.text_field :r42, id: :response_r42, size: "6x12" %></td>
-    </tr>
-     <tr>
-      <th scope="row"><%= form.label :r51 %></th>
-      <td>70%</td>
-      <td>40%</td>
-      <td><%= form.text_field :r51, id: :response_r51, size: "6x12" %></td>
-    </tr>
-     <tr>
-      <th scope="row"><%= form.label :r52 %></th>
-      <td>80%</td>
-      <td>50%</td>
-      <td><%= form.text_field :r52, id: :response_r52, size: "6x12" %></td>
-    </tr>
-     <tr>
-      <th scope="row"><%= form.label :r53 %></th>
-      <td>90%</td>
-      <td>60%</td>
-      <td><%= form.text_field :r53, id: :response_r53, size: "6x12" %></td>
-    </tr>
-     <tr>
-      <th scope="row"><%= form.label :r54 %></th>
-      <td>100%</td>
-      <td>70%</td>
-      <td><%= form.text_field :r54, id: :response_r54, size: "6x12" %></td>
-    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Very Poor</td>
+      <td>Very Good</td>
+      <td>
+        <select class="selectpicker" name="response[r21]">
+          <option>-</option>
+          <option>Perfect</option>
+          <option>Slightly below perfect</option>
+          <option style="background: #5cb85c; color: #fff;">Very good</option>
+          <option style="background: #5cb85c; color: #fff;">Slightly above good</option>
+          <option style="background: #5cb85c; color: #fff;">Good</option>
+          <option style="background: #5cb85c; color: #fff;">Slightly below good</option>
+          <option style="background: #5cb85c; color: #fff;">Above average</option>
+          <option style="background: #5cb85c; color: #fff;">Slightly above average</option> 
+          <option style="background: #5cb85c; color: #fff;">Average</option>
+          <option style="background: #5cb85c; color: #fff;">Slightly below average</option>
+          <option style="background: #5cb85c; color: #fff;">Below average</option>
+          <option style="background: #5cb85c; color: #fff;">Slightly above poor</option>
+          <option  style="background: #5cb85c; color: #fff;">Poor</option>
+          <option style="background: #5cb85c; color: #fff;">Slightly below poor</option>
+          <option style="background: #5cb85c; color: #fff;">Very poor</option>
+          <option>Slightly above inadequate</option>
+          <option>Inadequate</option>
+        </select>
 
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">4</th>
+      <td>Inadequate</td>
+      <td>Very Poor</td>
+      <td>
+         <select class="selectpicker" name="response[r41]">
+          <option>-</option>
+          <option>Perfect</option>
+          <option>Slightly below perfect</option>
+          <option>Very good</option>
+          <option>Slightly above good</option>
+          <option>Good</option>
+          <option>Slightly below good</option>
+          <option>Above average</option>
+          <option>Slightly above average</option> 
+          <option >Average</option>
+          <option >Slightly below average</option>
+          <option >Below average</option>
+          <option>Slightly above poor</option>
+          <option >Poor</option>
+          <option>Slightly below poor</option>
+          <option style="background: #5cb85c; color: #fff;">Very poor</option>
+          <option style="background: #5cb85c; color: #fff;">Slightly above inadequate</option>
+          <option style="background: #5cb85c; color: #fff;">Inadequate</option>
+        </select>
+        
+      </td>
+     </tr>
+      <tr>
+      <th scope="row">5</th>
+      <td>Average</td>
+      <td>Below Average</td>
+      <td>
+         <select class="selectpicker" name="response[r28]">
+          <option>-</option>
+          <option>Perfect</option>
+          <option>Slightly below perfect</option>
+          <option>Very good</option>
+          <option>Slightly above good</option>
+          <option>Good</option>
+          <option>Slightly below good</option>
+          <option>Above average</option>
+          <option>Slightly above average</option> 
+          <option style="background: #5cb85c; color: #fff;">Average</option>
+          <option style="background: #5cb85c; color: #fff;">Slightly below average</option>
+          <option style="background: #5cb85c; color: #fff;">Below average</option>
+          <option>Slightly above poor</option>
+          <option >Poor</option>
+          <option>Slightly below poor</option>
+          <option>Very poor</option>
+          <option>Slightly above inadequate</option>
+          <option>Inadequate</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">6</th>
+      <td>Very Good</td>
+      <td>Excellent</td>
+      <td>
+         <select class="selectpicker" name="response[r42]">
+          <option>-</option>
+          <option style="background: #5cb85c; color: #fff;">Perfect</option>
+          <option style="background: #5cb85c; color: #fff;">Slightly below perfect</option>
+          <option style="background: #5cb85c; color: #fff;">Very good</option>
+          <option>Slightly above good</option>
+          <option>Good</option>
+          <option>Slightly below good</option>
+          <option>Above average</option>
+          <option>Slightly above average</option> 
+          <option>Average</option>
+          <option>Slightly below average</option>
+          <option >Below average</option>
+          <option>Slightly above poor</option>
+          <option >Poor</option>
+          <option>Slightly below poor</option>
+          <option>Very poor</option>
+          <option>Slightly above inadequate</option>
+          <option>Inadequate</option>
+        </select>
+      </td>
+     </tr>
+     <tr>
+      <th scope="row">7</th>
+      <td>Good</td>
+      <td>Good</td>
+      <td>
+        <select class="selectpicker" name="response[r11]">
+          <option>-</option>
+          <option>Perfect</option>
+          <option>Slightly below perfect</option>
+          <option>Very good</option>
+          <option>Slightly above good</option>
+          <option style="background: #5cb85c; color: #fff;">Good</option>
+          <option>Slightly below good</option>
+          <option>Above average</option>
+          <option>Slightly above average</option> 
+          <option>Average</option>
+          <option>Slightly below average</option>
+          <option>Below average</option>
+          <option>Slightly above poor</option>
+          <option>Poor</option>
+          <option>Slightly below poor</option>
+          <option>Very poor</option>
+          <option>Slightly above inadequate</option>
+          <option>Inadequate</option>
+        </select>
+
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">8</th>
+      <td>Excellent</td>
+      <td>Good</td>
+      <td>
+        <select class="selectpicker" name="response[r51]">
+          <option>-</option>
+          <option style="background: #5cb85c; color: #fff;">Perfect</option>
+          <option style="background: #5cb85c; color: #fff;">Slightly below perfect</option>
+          <option style="background: #5cb85c; color: #fff;">Very good</option>
+          <option style="background: #5cb85c; color: #fff;">Slightly above good</option>
+          <option style="background: #5cb85c; color: #fff;">Good</option>
+          <option >Slightly below good</option>
+          <option>Above average</option>
+          <option>Slightly above average</option> 
+          <option>Average</option>
+          <option>Slightly below average</option>
+          <option >Below average</option>
+          <option>Slightly above poor</option>
+          <option >Poor</option>
+          <option>Slightly below poor</option>
+          <option>Very poor</option>
+          <option>Slightly above inadequate</option>
+          <option>Inadequate</option>
+        </select>
+        
+
+      </td>
+</tr>
+ <tr>
+      <th scope="row">9</th>
+      <td>Inadequate</td>
+      <td>Perfect</td>
+      <td>
+        <select class="selectpicker" name="response[r31]">
+          <option>-</option>
+          <option style="background: #5cb85c; color: #fff;">Perfect</option>
+          <option style="background: #5cb85c; color: #fff;">Slightly below perfect</option>
+          <option style="background: #5cb85c; color: #fff;">Very good</option>
+          <option style="background: #5cb85c; color: #fff;">Slightly above good</option>
+          <option style="background: #5cb85c; color: #fff;">Good</option>
+          <option style="background: #5cb85c; color: #fff;">Slightly below good</option>
+          <option style="background: #5cb85c; color: #fff;">Above average</option>
+          <option style="background: #5cb85c; color: #fff;">Slightly above average</option> 
+          <option style="background: #5cb85c; color: #fff;">Average</option>
+          <option style="background: #5cb85c; color: #fff;">Slightly below average</option>
+          <option style="background: #5cb85c; color: #fff;">Below average</option>
+          <option style="background: #5cb85c; color: #fff;">Slightly above poor</option>
+          <option  style="background: #5cb85c; color: #fff;">Poor</option>
+          <option style="background: #5cb85c; color: #fff;">Slightly below poor</option>
+          <option style="background: #5cb85c; color: #fff;">Very poor</option>
+          <option style="background: #5cb85c; color: #fff;">Slightly above inadequate</option>
+          <option style="background: #5cb85c; color: #fff;">Inadequate</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+
+      <th scope="row">10</th>
+      <td>Perfect</td>
+      <td>Inadequate</td>
+      <td>
+         <select class="selectpicker" name="response[r32]">
+          <option>-</option>
+          <option style="background: #5cb85c; color: #fff;">Perfect</option>
+          <option style="background: #5cb85c; color: #fff;">Slightly below perfect</option>
+          <option style="background: #5cb85c; color: #fff;">Very good</option>
+          <option style="background: #5cb85c; color: #fff;">Slightly above good</option>
+          <option style="background: #5cb85c; color: #fff;">Good</option>
+          <option style="background: #5cb85c; color: #fff;">Slightly below good</option>
+          <option style="background: #5cb85c; color: #fff;">Above average</option>
+          <option style="background: #5cb85c; color: #fff;">Slightly above average</option> 
+          <option style="background: #5cb85c; color: #fff;">Average</option>
+          <option style="background: #5cb85c; color: #fff;">Slightly below average</option>
+          <option style="background: #5cb85c; color: #fff;">Below average</option>
+          <option style="background: #5cb85c; color: #fff;">Slightly above poor</option>
+          <option  style="background: #5cb85c; color: #fff;">Poor</option>
+          <option style="background: #5cb85c; color: #fff;">Slightly below poor</option>
+          <option style="background: #5cb85c; color: #fff;">Very poor</option>
+          <option style="background: #5cb85c; color: #fff;">Slightly above inadequate</option>
+          <option style="background: #5cb85c; color: #fff;">Inadequate</option>
+        </select>
+      </td>
+    </tr>
+     <tr>
+      <th scope="row">11</th>
+      <td>Very Good</td>
+      <td>Very Poor</td>
+      <td>
+        <select class="selectpicker" name="response[r25]">
+          <option>-</option>
+          <option>Perfect</option>
+          <option>Slightly below perfect</option>
+          <option style="background: #5cb85c; color: #fff;">Very good</option>
+          <option style="background: #5cb85c; color: #fff;">Slightly above good</option>
+          <option style="background: #5cb85c; color: #fff;">Good</option>
+          <option style="background: #5cb85c; color: #fff;">Slightly below good</option>
+          <option style="background: #5cb85c; color: #fff;">Above average</option>
+          <option style="background: #5cb85c; color: #fff;">Slightly above average</option> 
+          <option style="background: #5cb85c; color: #fff;">Average</option>
+          <option style="background: #5cb85c; color: #fff;">Slightly below average</option>
+          <option style="background: #5cb85c; color: #fff;">Below average</option>
+          <option style="background: #5cb85c; color: #fff;">Slightly above poor</option>
+          <option  style="background: #5cb85c; color: #fff;">Poor</option>
+          <option style="background: #5cb85c; color: #fff;">Slightly below poor</option>
+          <option style="background: #5cb85c; color: #fff;">Very poor</option>
+          <option>Slightly above inadequate</option>
+          <option>Inadequate</option>
+        </select>
+      </td>
+    </tr>
+     <tr>
+      <th scope="row">12</th>
+      <td>Poor</td>
+      <td>Poor</td>
+
+      <td>
+       <select class="selectpicker" name="response[r13]">
+        <option>-</option>
+          <option>Perfect</option>
+          <option>Slightly below perfect</option>
+          <option>Very good</option>
+          <option>Slightly above good</option>
+          <option >Good</option>
+          <option>Slightly below good</option>
+          <option>Above average</option>
+          <option>Slightly above average</option> 
+          <option>Average</option>
+          <option>Slightly below average</option>
+          <option>Below average</option>
+          <option>Slightly above poor</option>
+          <option  style="background: #5cb85c; color: #fff;">Poor</option>
+          <option>Slightly below poor</option>
+          <option>Very poor</option>
+          <option>Slightly above inadequate</option>
+          <option>Inadequate</option>
+        </select>
+
+
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">13</th>
+      <td>Below Average</td>
+      <td>Above Average</td>
+      <td>
+        <select class="selectpicker" name="response[r23]">
+          <option>-</option>
+          <option>Perfect</option>
+          <option>Slightly below perfect</option>
+          <option>Very good</option>
+          <option>Slightly above good</option>
+          <option>Good</option>
+          <option>Slightly below good</option>
+          <option style="background: #5cb85c; color: #fff;">Above average</option>
+          <option style="background: #5cb85c; color: #fff;">Slightly above average</option> 
+          <option style="background: #5cb85c; color: #fff;">Average</option>
+          <option style="background: #5cb85c; color: #fff;">Slightly below average</option>
+          <option style="background: #5cb85c; color: #fff;">Below average</option>
+          <option>Slightly above poor</option>
+          <option >Poor</option>
+          <option>Slightly below poor</option>
+          <option>Very poor</option>
+          <option>Slightly above inadequate</option>
+          <option>Inadequate</option>
+        </select>
+      </td>
+    </tr>
+     <tr>
+      <th scope="row">14</th>
+      <td>Very Good</td>
+      <td>Average</td>
+      <td>
+         <select class="selectpicker" name="response[r51]">
+          <option>-</option>
+          <option >Perfect</option>
+          <option>Slightly below perfect</option>
+          <option style="background: #5cb85c; color: #fff;">Very good</option>
+          <option style="background: #5cb85c; color: #fff;">Slightly above good</option>
+          <option style="background: #5cb85c; color: #fff;">Good</option>
+          <option style="background: #5cb85c; color: #fff;">Slightly below good</option>
+          <option style="background: #5cb85c; color: #fff;">Above average</option>
+          <option style="background: #5cb85c; color: #fff;">Slightly above average</option> 
+          <option style="background: #5cb85c; color: #fff;">Average</option>
+          <option>Slightly below average</option>
+          <option >Below average</option>
+          <option>Slightly above poor</option>
+          <option >Poor</option>
+          <option>Slightly below poor</option>
+          <option>Very poor</option>
+          <option>Slightly above inadequate</option>
+          <option>Inadequate</option>
+        </select>
+      </td>
+     </tr>
+      <tr>
+      <th scope="row">15</th>
+      <td>Good</td>
+      <td>Below Average</td>
+      <td>
+        <select class="selectpicker" name="response[r51]">
+          <option>-</option>
+          <option style="background: #5cb85c; color: #fff;">Perfect</option>
+          <option style="background: #5cb85c; color: #fff;">Slightly below perfect</option>
+          <option style="background: #5cb85c; color: #fff;">Very good</option>
+          <option>Slightly above good</option>
+          <option>Good</option>
+          <option>Slightly below good</option>
+          <option>Above average</option>
+          <option>Slightly above average</option> 
+          <option>Average</option>
+          <option>Slightly below average</option>
+          <option >Below average</option>
+          <option>Slightly above poor</option>
+          <option >Poor</option>
+          <option>Slightly below poor</option>
+          <option>Very poor</option>
+          <option>Slightly above inadequate</option>
+          <option>Inadequate</option>
+        </select>
+      </td>
+     </tr>
+      <tr>
+      <th scope="row">16</th>
+      <td>Average</td>
+      <td>Above Average</td>
+      <td>
+         <select class="selectpicker" name="response[r24]">
+          <option>-</option>
+          <option>Perfect</option>
+          <option>Slightly below perfect</option>
+          <option>Very good</option>
+          <option>Slightly above good</option>
+          <option>Good</option>
+          <option>Slightly below good</option>
+          <option>Above average</option>
+          <option>Slightly above average</option> 
+          <option style="background: #5cb85c; color: #fff;">Average</option>
+          <option style="background: #5cb85c; color: #fff;">Slightly below average</option>
+          <option style="background: #5cb85c; color: #fff;">Below average</option>
+          <option>Slightly above poor</option>
+          <option >Poor</option>
+          <option>Slightly below poor</option>
+          <option>Very poor</option>
+          <option>Slightly above inadequate</option>
+          <option>Inadequate</option>
+        </select>
+        
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">17</th>
+      <td>Above Average</td>
+      <td>Below Average</td>
+      <td>
+         <select class="selectpicker" name="response[r27]">
+          <option>-</option>
+          <option>Perfect</option>
+          <option>Slightly below perfect</option>
+          <option>Very good</option>
+          <option>Slightly above good</option>
+          <option>Good</option>
+          <option>Slightly below good</option>
+          <option style="background: #5cb85c; color: #fff;">Above average</option>
+          <option style="background: #5cb85c; color: #fff;">Slightly above average</option> 
+          <option style="background: #5cb85c; color: #fff;">Average</option>
+          <option style="background: #5cb85c; color: #fff;">Slightly below average</option>
+          <option style="background: #5cb85c; color: #fff;">Below average</option>
+          <option>Slightly above poor</option>
+          <option >Poor</option>
+          <option>Slightly below poor</option>
+          <option>Very poor</option>
+          <option>Slightly above inadequate</option>
+          <option>Inadequate</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">18</th>
+      <td>Very Good</td>
+      <td>Above Average</td>
+      <td>
+        <select class="selectpicker" name="response[r51]">
+          <option>-</option>
+          <option >Perfect</option>
+          <option>Slightly below perfect</option>
+          <option style="background: #5cb85c; color: #fff;">Very good</option>
+          <option style="background: #5cb85c; color: #fff;">Slightly above good</option>
+          <option style="background: #5cb85c; color: #fff;">Good</option>
+          <option style="background: #5cb85c; color: #fff;">Slightly below good</option>
+          <option style="background: #5cb85c; color: #fff;">Above average</option>
+          <option>Slightly above average</option> 
+          <option>Average</option>
+          <option>Slightly below average</option>
+          <option >Below average</option>
+          <option>Slightly above poor</option>
+          <option >Poor</option>
+          <option>Slightly below poor</option>
+          <option>Very poor</option>
+          <option>Slightly above inadequate</option>
+          <option>Inadequate</option>
+        </select>
+      </td>
+     </tr>
+      <tr>
+      <th scope="row">19</th>
+      <td>Average</td>
+      <td>Average</td>
+      <td>
+        <select class="selectpicker" name="response[r12]">
+          <option>-</option>
+          <option>Perfect</option>
+          <option>Slightly below perfect</option>
+          <option>Very good</option>
+          <option>Slightly above good</option>
+          <option >Good</option>
+          <option>Slightly below good</option>
+          <option>Above average</option>
+          <option>Slightly above average</option> 
+          <option style="background: #5cb85c; color: #fff;">Average</option>
+          <option>Slightly below average</option>
+          <option>Below average</option>
+          <option>Slightly above poor</option>
+          <option>Poor</option>
+          <option>Slightly below poor</option>
+          <option>Very poor</option>
+          <option>Slightly above inadequate</option>
+          <option>Inadequate</option>
+        </select>
+
+      </td>
+    </tr>
     
   </tbody>
 </table>
 <style>
 
+
+
 th{
   text-align: center;
-}
-.table {
-    border-radius: 5px;
-    width: 50%;
-    margin: 0px auto;
-    float: none;
 }
 
   </style>

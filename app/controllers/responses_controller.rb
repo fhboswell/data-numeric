@@ -17,7 +17,7 @@ class ResponsesController < ApplicationController
     respond_to do |format|
       if @response.save
         flash[:success] = 'Response sucessfully recorded.'
-        cookies.permanent[:Survey1Completed] = "true"
+        cookies.permanent[:Survey2Completed] = "true"
         format.html { redirect_to done_index_url }
         format.json { render :show, status: :created, location: @response }
       else
