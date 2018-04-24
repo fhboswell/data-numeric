@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'numeric3/index'
+
   get 'numeric2/index'
 
   get 'numeric1/index'
